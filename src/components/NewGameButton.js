@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react'
 import {connect} from 'react-redux';
-import {startNewGame} from '../actions'
+import {startNewGame} from '../actions/startNewGame'
 //import './NewGameButton.css'
 
 import { Button } from 'react-bootstrap'

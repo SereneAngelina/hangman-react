@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import Title from './components/Title';
-import GameDisplay from './components/GameDisplay'
+import Game from './components/Game'
 
 class App extends Component {
   render() {
     return (
       <div className="App">
          <Title content="Hangman" />
-         <GameDisplay />
+         <Game />
       </div>
     );
   }

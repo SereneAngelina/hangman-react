@@ -1,4 +1,5 @@
-import * as actions from '../actions';
+import {START_NEW_GAME} from '../actions/startNewGame';
+import {MAKE_GUESS} from '../actions/makeGuess';
 import { images } from '../fixtures/images';
 import { feedback } from '../fixtures/constants'
 
@@ -18,10 +19,10 @@ const initialState = {
             hangmanPicture: images[0],
             feedback: NEW_GAME
 };
-//change name of wordDisplay and targetWord
+
 export default (state=initialState, action) => {
 
-   if (action.type === actions.START_NEW_GAME) {
+   if (action.type === START_NEW_GAME) {
 
         let { startGame, showInput } = action
         const targetWord = randomWords();
@@ -40,7 +41,7 @@ export default (state=initialState, action) => {
         });
     }
 
-    else if (action.type === actions.MAKE_GUESS) {
+    else if (action.type === MAKE_GUESS) {
 
         const {
             targetWord,
@@ -63,7 +64,7 @@ export default (state=initialState, action) => {
               });
         }
 
-        else if (indexArray.length < 1 && remainingLives > 1) {
+        else if (indexArray.length < 1 && remainingLives > 0) {
 
             const newImageIndex = imageIndex + 1;
             const hangmanPicture = images[newImageIndex];
@@ -77,11 +78,12 @@ export default (state=initialState, action) => {
 
             const moreThanOneLife = remainingLives > 1;
 
+
             return Object.assign({}, state, {
                   ...commonObject,
                   remainingLives: Math.max(remainingLives - 1, 0),
-wordDisplay: moreThanOneLife ? wordDisplay : targetWord,
-feedback: moreThanOneLife ?  WRONG_GUESS : GAME_OVER
+  wordDisplay: moreThanOneLife ? wordDisplay : targetWord,
+  feedback: moreThanOneLife ?  WRONG_GUESS : GAME_OVER
             });
 
         }

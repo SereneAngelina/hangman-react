@@ -1,7 +1,6 @@
 import React from 'react'
 import {connect} from 'react-redux'
-
-//import './HangmanDisplay.css'
+import './HangmanDisplay.css'
 
 export function HangmanDisplay (props) {
 

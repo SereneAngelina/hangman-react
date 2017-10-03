@@ -4,7 +4,7 @@ import toMarkdown from 'to-markdown'
 import { connect } from 'react-redux'
 import 'medium-editor/dist/css/medium-editor.css'
 import 'medium-editor/dist/css/themes/default.css'
-import {makeGuess} from '../actions'
+import {makeGuess} from '../actions/makeGuess'
 
 class Word extends PureComponent {
 constructor(props) {
