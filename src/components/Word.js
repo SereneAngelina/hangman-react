@@ -26,8 +26,10 @@ render() {
     return (
       <form onSubmit={this.onGuess}>
           <label htmlFor="user guess">Enter your guess </label>
+          <p>
           <input type="text" ref={input => this.input = input}
               maxLength="1" id="user-guess" required />
+              </p>
           <input type="submit" id="guessButton"
               className="button" name="submit" value="Guess"/>
       </form>

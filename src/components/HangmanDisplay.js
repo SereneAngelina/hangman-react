@@ -6,8 +6,8 @@ export function HangmanDisplay (props) {
 
     return (
         <div className="hangman-display-container">
-            <div className="remaining-lives">Remaing Lives: {props.remainingLives}</div>
-            <div className="hangman-picture"><img src={props.hangmanPicture}/></div>
+            <div className="remaining-lives">Remaining Lives: {props.remainingLives}</div>
+            <div><img src={props.hangmanPicture}/></div>
         </div>
     )
 }

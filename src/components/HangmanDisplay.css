@@ -1,7 +1,7 @@
 .hangman-display-container {
   border: 2px solid black;
   width: 20%;
-  height: 60%;
+  height: 80%;
   margin: auto;
   margin-bottom: 20px;
 }
